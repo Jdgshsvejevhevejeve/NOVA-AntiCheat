@@ -1,0 +1,56 @@
+# NOVA AntiCheat
+# Detection is server-side. No client installation is required.
+
+settings:
+  alerts: true
+  violation-decay-seconds: 30
+  exempt-permission: "novac.bypass"
+
+actions:
+  # Actions are applied after the player's violation level reaches the threshold.
+  # Set enabled=false to disable an action.
+  warn:
+    enabled: true
+    threshold: 5
+  setback:
+    enabled: true
+    threshold: 8
+  kick:
+    enabled: true
+    threshold: 20
+
+checks:
+  reach:
+    enabled: true
+    max-distance: 3.15
+    buffer: 3
+  autoclicker:
+    enabled: true
+    min-samples: 20
+    max-cps: 18.0
+    consistency-threshold: 0.92
+  speed:
+    enabled: true
+    max-horizontal-per-tick: 0.80
+    buffer: 5
+  flight:
+    enabled: true
+    max-air-ticks-without-support: 12
+    buffer: 3
+  nofall:
+    enabled: true
+    min-fall-distance: 4.0
+  fastbreak:
+    enabled: true
+    min-break-multiplier: 0.55
+  fastplace:
+    enabled: true
+    max-placements-per-second: 18
+  rotation:
+    enabled: true
+    max-yaw-change: 160.0
+    max-pitch-change: 90.0
+  knockback:
+    enabled: true
+    min-horizontal-displacement: 0.04
+    buffer: 4

@@ -1,0 +1,16 @@
+name: NOVA-AntiCheat
+version: 1.0.0
+main: com.nova.anticheat.NovaAntiCheat
+api-version: '1.21'
+author: NOVA
+description: Lightweight server-side anti-cheat for NOVA SMP.
+
+commands:
+  novac:
+    description: NOVA AntiCheat administration
+    usage: /novac <alerts|info|reload>
+    aliases: [novaac, anticheat]
+
+permissions:
+  novac.admin:
+    default: op
